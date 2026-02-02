@@ -1,0 +1,460 @@
+/* Employee Task Dashboard Home Styles - Modern Design */
+:root {
+  /* Color System */
+  --primary: #6366f1;
+  --primary-light: #818cf8;
+  --primary-dark: #4f46e5;
+  --success: #10b981;
+  --success-light: #34d399;
+  --warning: #f59e0b;
+  --warning-light: #fbbf24;
+  --error: #ef4444;
+  --error-light: #f87171;
+  --info: #06b6d4;
+  --info-light: #22d3ee;
+  
+  /* Neutral Colors */
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-tertiary: #64748b;
+  --text-muted: #94a3b8;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --border-light: #e2e8f0;
+  --border-medium: #cbd5e1;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}
+
+.O_D_H_dashboard {
+  padding: 24px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  min-height: 100vh;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+}
+
+/* Header Section */
+.O_D_H_header {
+  margin-bottom: 32px;
+}
+
+.O_D_H_welcome {
+  text-align: left;
+}
+
+.O_D_H_dashboard-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 8px 0;
+  letter-spacing: -0.025em;
+}
+
+.O_D_H_subtitle {
+  font-size: 1rem;
+  color: var(--text-tertiary);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Stats Grid */
+.O_D_H_stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.O_D_H_stat-card {
+  background: var(--bg-primary);
+  padding: 24px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.O_D_H_stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.O_D_H_stat-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.O_D_H_stat-number {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.O_D_H_stat-number.completed {
+  color: var(--success);
+}
+
+.O_D_H_stat-number.pending {
+  color: var(--error);
+}
+
+.O_D_H_stat-number.progress {
+  color: var(--warning);
+}
+
+.O_D_H_stat-change {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-tertiary);
+  color: var(--text-tertiary);
+}
+
+.O_D_H_stat-change.positive {
+  background: var(--success-light);
+  color: #047857;
+}
+
+.O_D_H_stat-change.negative {
+  background: var(--error-light);
+  color: #dc2626;
+}
+
+.O_D_H_stat-change.neutral {
+  background: var(--warning-light);
+  color: #d97706;
+}
+
+.O_D_H_stat-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  margin: 0 0 4px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.O_D_H_stat-detail {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Content Grid */
+.O_D_H_content-grid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+  align-items: start;
+}
+
+.O_D_H_charts-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.O_D_H_chart-card {
+  background: var(--bg-primary);
+  padding: 24px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+}
+
+.O_D_H_chart-header {
+  margin-bottom: 20px;
+}
+
+.O_D_H_chart-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 4px 0;
+}
+
+.O_D_H_chart-subtitle {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+/* Actions Sidebar */
+.O_D_H_actions-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.O_D_H_actions-card,
+.O_D_H_table-card {
+  background: var(--bg-primary);
+  padding: 24px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+}
+
+.O_D_H_actions-title,
+.O_D_H_table-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 4px 0;
+}
+
+.O_D_H_table-subtitle {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+.O_D_H_action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.O_D_H_action-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  background: var(--bg-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  width: 100%;
+}
+
+.O_D_H_action-btn:hover {
+  border-color: var(--primary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.O_D_H_action-btn.primary:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.O_D_H_action-btn.secondary:hover {
+  background: var(--success);
+  color: white;
+}
+
+.O_D_H_action-btn.tertiary:hover {
+  background: var(--warning);
+  color: white;
+}
+
+.O_D_H_action-icon {
+  font-size: 1.25rem;
+}
+
+.O_D_H_action-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.O_D_H_action-text strong {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.O_D_H_action-text small {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+
+.O_D_H_action-btn:hover .O_D_H_action-text small {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Table Styles */
+.O_D_H_table-container {
+  margin-top: 16px;
+}
+
+.O_D_H_tasks-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.O_D_H_tasks-table th {
+  background: var(--bg-secondary);
+  color: var(--text-tertiary);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-light);
+  text-align: left;
+}
+
+.O_D_H_tasks-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-secondary);
+}
+
+.O_D_H_tasks-table tr:last-child td {
+  border-bottom: none;
+}
+
+.O_D_H_tasks-table tr:hover {
+  background: var(--bg-tertiary);
+}
+
+.O_D_H_task-name {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.O_D_H_employee {
+  color: var(--text-tertiary);
+}
+
+.O_D_H_status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.O_D_H_status-completed {
+  background: var(--success-light);
+  color: #047857;
+}
+
+.O_D_H_status-pending {
+  background: var(--error-light);
+  color: #dc2626;
+}
+
+.O_D_H_status-in-progress {
+  background: var(--warning-light);
+  color: #d97706;
+}
+
+.O_D_H_due-date {
+  color: var(--text-tertiary);
+  font-size: 0.75rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .O_D_H_content-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .O_D_H_actions-sidebar {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .O_D_H_dashboard {
+    padding: 16px;
+  }
+  
+  .O_D_H_stats-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .O_D_H_stat-card {
+    padding: 20px;
+  }
+  
+  .O_D_H_chart-card,
+  .O_D_H_actions-card,
+  .O_D_H_table-card {
+    padding: 20px;
+  }
+  
+  .O_D_H_dashboard-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .O_D_H_stat-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .O_D_H_stat-change {
+    align-self: flex-start;
+  }
+  
+  .O_D_H_chart-card,
+  .O_D_H_actions-card,
+  .O_D_H_table-card {
+    padding: 16px;
+  }
+  
+  .O_D_H_tasks-table {
+    font-size: 0.75rem;
+  }
+  
+  .O_D_H_tasks-table th,
+  .O_D_H_tasks-table td {
+    padding: 8px 12px;
+  }
+}
+
+/* Custom Scrollbar */
+.O_D_H_table-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.O_D_H_table-container::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+}
+
+.O_D_H_table-container::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 3px;
+}
+
+.O_D_H_table-container::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+/* Fix Due Date column spacing */
+.O_D_H_due-date {
+  color: var(--text-tertiary);
+  font-size: 0.75rem;
+  padding: 8px 16px;   /* Add horizontal padding */
+  text-align: center;  /* Keep dates neat in center */
+  white-space: nowrap; /* Prevent line breaks */
+}

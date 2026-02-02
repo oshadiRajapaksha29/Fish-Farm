@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== HEADER ===== */
+.O_A_I_header {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+/* ===== FORM CONTAINER ===== */
+form {
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== LABELS ===== */
+label {
+  font-size: 0.95rem;
+  color: #334155;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+/* ===== INPUTS & SELECT ===== */
+input[type="text"],
+input[type="number"],
+select {
+  padding: 12px 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #334155;
+  background: #f9fafb;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* ===== OPTIONS ===== */
+option {
+  font-size: 1rem;
+  color: #334155;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+button[type="submit"] {
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, #1e40af, #1d4ed8);
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3);
+  transform: translateY(-1px);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 600px) {
+  form {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .O_A_I_header {
+    font-size: 1.8rem;
+  }
+}

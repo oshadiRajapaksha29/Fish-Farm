@@ -1,0 +1,255 @@
+/* MedicineList.css */
+
+.S_VM_view-medicine-container {
+  padding: 16px;
+  background: linear-gradient(135deg, #f0f6ff, #eaf1ff);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.S_VM_view-medicine-container .S_VM_view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.S_VM_view-medicine-container .S_VM_view-header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e3a8a;
+  letter-spacing: 0.3px;
+}
+
+.S_VM_view-medicine-container .S_VM_view-header .S_VM_btn {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+.S_VM_view-medicine-container .S_VM_view-header .S_VM_btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.4);
+}
+
+/* Box layout */
+.S_VM_view-medicine-container .S_VM_medicine-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 7px; /* tighter spacing between cards */
+}
+
+.S_VM_view-medicine-container .S_VM_medicine-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 9px; /* smaller padding */
+  box-shadow: 0 3px 8px rgba(0, 51, 102, 0.08);
+  border-left: 5px solid #2563eb;
+  transition: all 0.3s ease;
+  animation: S_VM_fadeIn 0.6s ease;
+  font-size: 0.9rem;
+}
+
+.S_VM_view-medicine-container .S_VM_medicine-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.12);
+}
+
+/* Header row */
+.S_VM_view-medicine-container .S_VM_medicine-box-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.S_VM_view-medicine-container .S_VM_medicine-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1e40af;
+}
+
+.S_VM_view-medicine-container .S_VM_badge {
+  font-size: 9px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+
+/* Description box */
+.S_VM_view-medicine-container .S_VM_medicine-description {
+  display: block;
+  padding: 10px 12px 10px 16px;
+  background: #f8fafc;
+  color: #0f172a;
+  border: 1px solid #e5e7eb;
+  border-left: 3px solid #2563eb;
+  border-radius: 10px;
+  line-height: 1.4;
+  font-size: 13px;
+  max-width: 70ch;
+  position: relative;
+  margin-bottom: 8px;
+}
+.S_VM_view-medicine-container .S_VM_medicine-description::before {
+  content: "“";
+  position: absolute;
+  left: 6px;
+  top: -4px;
+  font-size: 24px;
+  color: #c7d2fe;
+  font-weight: 700;
+  opacity: .5;
+}
+
+/* Image */
+.S_VM_view-medicine-container .S_VM_medicine-image {
+  margin: 6px 0;
+}
+.S_VM_view-medicine-container .S_VM_medicine-image img {
+  width: 260px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  display: block;
+}
+
+/* Rows compact - FIXED VERSION */
+.S_VM_view-medicine-container .S_VM_rows {
+  margin-top: 6px;
+  display: grid;
+  gap: 2px;
+}
+.S_VM_view-medicine-container .S_VM_row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.4;
+}
+.S_VM_view-medicine-container .S_VM_row strong {
+  color: #111827;
+  font-weight: 700;
+  min-width: fit-content;
+}
+
+/* Actions */
+.S_VM_view-medicine-container .S_VM_actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.S_VM_view-medicine-container .S_VM_btn {
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: transform .15s ease, background .2s ease;
+}
+.S_VM_view-medicine-container .S_VM_btn:hover { transform: translateY(-1px); }
+
+.S_VM_view-medicine-container .S_VM_btn.S_VM_secondary {
+  background: #6b7280;
+  color: #fff;
+}
+.S_VM_view-medicine-container .S_VM_btn.S_VM_secondary:hover { background: #4b5563; }
+
+.S_VM_view-medicine-container .S_VM_btn.S_VM_danger {
+  background: #dc2626;
+  color: #fff;
+}
+.S_VM_view-medicine-container .S_VM_btn.S_VM_danger:hover { background: #b91c1c; }
+
+@keyframes S_VM_fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+/* Search Bar */
+.S_VM_view-medicine-container .S_VM_medicine-search-bar {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.S_VM_view-medicine-container .S_VM_medicine-search-bar input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 40px 10px 16px;
+  border-radius: 50px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  background-color: #f8fafc;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%236b7280' stroke-width='2' viewBox='0 0 24 24'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: right 15px center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.S_VM_view-medicine-container .S_VM_medicine-search-bar input:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+  background-position: right 17px center;
+}
+.S_VM_view-medicine-container .S_VM_medicine-search-bar input::placeholder {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* Toast */
+.S_VM_toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  z-index: 1000;
+  animation: S_VM_slideIn 0.3s ease;
+}
+
+.S_VM_toast.success {
+  background: #10b981;
+}
+
+.S_VM_toast.error {
+  background: #ef4444;
+}
+
+@keyframes S_VM_slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Loading */
+.S_VM_loading {
+  text-align: center;
+  font-size: 16px;
+  color: #2563eb;
+  font-weight: 600;
+  margin-top: 40px;
+}

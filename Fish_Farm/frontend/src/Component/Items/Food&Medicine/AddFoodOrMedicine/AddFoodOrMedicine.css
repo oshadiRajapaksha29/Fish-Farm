@@ -1,0 +1,247 @@
+/* Add Food & Medicine Page - Themed to match Food & Medicine Dashboard */
+
+/* Using the same theme tokens as dashboard */
+:root {
+  --bg-1: #eef2ff;   /* indigo-50 */
+  --bg-2: #e0f2fe;   /* sky-100  */
+  --ink: #0f172a;    /* slate-900 */
+  --muted: #64748b;  /* slate-500 */
+  --muted-2: #94a3b8;/* slate-400 */
+
+  --card-bg: rgba(255, 255, 255, 0.92);
+  --card-br: 16px;
+  --card-bd: 1px solid rgba(15, 23, 42, 0.08);
+  --card-shadow: 0 12px 28px rgba(2, 6, 23, 0.08), 0 4px 12px rgba(2, 6, 23, 0.05);
+
+  --ring: #a5b4fc;
+  --primary: #3b82f6; /* blue */
+  --success: #22c55e; /* green */
+  --warning: #f59e0b; /* amber */
+  --danger: #ef4444;  /* red */
+}
+
+/* Base container for the form page */
+.r_A_FM_container {
+  padding: 30px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  color: var(--ink);
+  background:
+    radial-gradient(1000px 600px at -10% -20%, var(--bg-1), transparent 60%),
+    radial-gradient(800px 480px at 110% 0%, var(--bg-2), transparent 55%);
+  border-radius: 20px;
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Page title */
+.r_A_FM_title {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  background: linear-gradient(90deg, #111827, #334155 40%, #2563eb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0 0 24px 0;
+  text-align: center;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.r_A_FM_title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 60px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 2px;
+}
+
+/* Form styling */
+.r_A_FM_form {
+  background: var(--card-bg);
+  backdrop-filter: blur(6px);
+  border: var(--card-bd);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--card-br);
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .r_A_FM_form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Form labels */
+.r_A_FM_label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 15px;
+}
+
+/* Form inputs */
+.r_A_FM_input,
+.r_A_FM_select,
+.r_A_FM_textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
+  color: var(--ink);
+  font-size: 15px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.r_A_FM_input:focus,
+.r_A_FM_select:focus,
+.r_A_FM_textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  outline: none;
+}
+
+.r_A_FM_textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* File input styling */
+.r_A_FM_file {
+  width: 100%;
+  padding: 10px;
+  border: 1px dashed rgba(15, 23, 42, 0.2);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.r_A_FM_file:hover {
+  background-color: rgba(59, 130, 246, 0.05);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+/* Description textarea - make it span 2 columns */
+.r_A_FM_form div:nth-child(6) {
+  grid-column: 1 / -1;
+}
+
+/* Image upload - make it span 2 columns */
+.r_A_FM_form div:nth-child(7) {
+  grid-column: 1 / -1;
+}
+
+/* Buttons container - span 2 columns */
+.r_A_FM_buttons {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+/* Button styling */
+.r_A_FM_btn {
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+}
+
+.r_A_FM_btn_submit {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.r_A_FM_btn_submit:hover {
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+  transform: translateY(-2px);
+}
+
+.r_A_FM_btn_submit:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+}
+
+.r_A_FM_btn_submit:disabled {
+  background: linear-gradient(135deg, #93c5fd, #60a5fa);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.r_A_FM_btn_reset {
+  background-color: white;
+  color: var(--muted);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.r_A_FM_btn_reset:hover {
+  background-color: #f8fafc;
+  color: var(--ink);
+  border-color: rgba(15, 23, 42, 0.2);
+}
+
+/* Error message styling */
+.error-message {
+  color: var(--danger);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.input-error {
+  border-color: var(--danger) !important;
+  background-color: rgba(254, 226, 226, 0.2);
+}
+
+/* Animation for form shake when there are errors */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.animate-shake {
+  animation: shake 0.5s;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .r_A_FM_container {
+    padding: 16px;
+  }
+  
+  .r_A_FM_title {
+    font-size: 24px;
+  }
+  
+  .r_A_FM_form {
+    padding: 20px;
+  }
+  
+  .r_A_FM_buttons {
+    flex-direction: column;
+  }
+  
+  .r_A_FM_btn {
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+  }
+}

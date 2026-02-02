@@ -1,0 +1,258 @@
+/* Food & Medicine Update Page - Themed to match Dashboard */
+
+/* Theme tokens - using same variables as dashboard */
+:root {
+  --bg-1: #eef2ff;   /* indigo-50 */
+  --bg-2: #e0f2fe;   /* sky-100  */
+  --ink: #0f172a;    /* slate-900 */
+  --muted: #64748b;  /* slate-500 */
+  --muted-2: #94a3b8;/* slate-400 */
+
+  --card-bg: rgba(255, 255, 255, 0.92);
+  --card-br: 16px;
+  --card-bd: 1px solid rgba(15, 23, 42, 0.08);
+  --card-shadow: 0 12px 28px rgba(2, 6, 23, 0.08), 0 4px 12px rgba(2, 6, 23, 0.05);
+
+  --ring: #a5b4fc;
+
+  --primary: #3b82f6;   /* blue */
+  --success: #22c55e;   /* green */
+  --warning: #f59e0b;   /* amber */
+  --danger: #ef4444;    /* red */
+}
+
+/* === Container === */
+.r_u_FM_container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 30px;
+  color: var(--ink);
+  background: radial-gradient(1000px 600px at -10% -20%, var(--bg-1), transparent 60%),
+    radial-gradient(800px 480px at 110% 0%, var(--bg-2), transparent 55%);
+  border-radius: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  min-height: calc(100vh - 100px);
+}
+
+/* === Title === */
+.r_u_FM_title {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  background: linear-gradient(90deg, #111827, #334155 40%, #2563eb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0 0 24px 0;
+  text-align: center;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.r_u_FM_title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 60px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 2px;
+}
+
+/* === Form === */
+.r_u_FM_form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background: var(--card-bg);
+  backdrop-filter: blur(6px);
+  border: var(--card-bd);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--card-br);
+  padding: 32px;
+}
+
+@media (max-width: 768px) {
+  .r_u_FM_form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Labels === */
+.r_u_FM_label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 15px;
+}
+
+/* === Inputs & Select === */
+.r_u_FM_input,
+.r_u_FM_textarea,
+.r_u_FM_file,
+.r_u_FM_select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
+  color: var(--ink);
+  font-size: 15px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.r_u_FM_input:focus,
+.r_u_FM_textarea:focus,
+.r_u_FM_file:focus,
+.r_u_FM_select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  outline: none;
+}
+
+/* === Textarea === */
+.r_u_FM_textarea {
+  resize: vertical;
+  min-height: 120px;
+  grid-column: 1 / -1;
+}
+
+/* === File Input === */
+.r_u_FM_file {
+  border: 1px dashed rgba(15, 23, 42, 0.2);
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  padding: 10px;
+  grid-column: 1 / -1;
+}
+
+.r_u_FM_file:hover {
+  background-color: rgba(59, 130, 246, 0.05);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+/* === Buttons Wrapper === */
+.r_u_FM_buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  margin-top: 20px;
+  grid-column: 1 / -1;
+}
+
+/* === Button Styles === */
+.r_u_FM_btn {
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+}
+
+.r_u_FM_btn_submit {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.r_u_FM_btn_submit:hover {
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+  transform: translateY(-2px);
+}
+
+.r_u_FM_btn_submit:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+}
+
+.r_u_FM_btn_cancel {
+  background-color: white;
+  color: var(--muted);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.r_u_FM_btn_cancel:hover {
+  background-color: #f8fafc;
+  color: var(--ink);
+  border-color: rgba(15, 23, 42, 0.2);
+}
+
+/* === Error Messages === */
+.r_u_FM_error {
+  color: var(--danger);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.r_u_FM_input_error {
+  border-color: var(--danger) !important;
+  background-color: rgba(254, 226, 226, 0.2);
+}
+
+/* === Current Image Display === */
+.r_u_FM_current_image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+  border: var(--card-bd);
+  box-shadow: 0 2px 8px rgba(2, 6, 23, 0.05);
+  margin-top: 10px;
+  grid-column: 1 / -1;
+  display: block;
+}
+
+/* === Responsive === */
+@media (max-width: 992px) {
+  .r_u_FM_container {
+    padding: 24px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .r_u_FM_container {
+    padding: 20px;
+    margin: 20px;
+    max-width: 100%;
+  }
+
+  .r_u_FM_title {
+    font-size: 26px;
+  }
+  
+  .r_u_FM_form {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .r_u_FM_container {
+    padding: 16px;
+    margin: 10px;
+  }
+
+  .r_u_FM_title {
+    font-size: 22px;
+  }
+  
+  .r_u_FM_form {
+    padding: 16px;
+  }
+  
+  .r_u_FM_buttons {
+    flex-direction: column;
+  }
+  
+  .r_u_FM_btn {
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+  }
+}
+

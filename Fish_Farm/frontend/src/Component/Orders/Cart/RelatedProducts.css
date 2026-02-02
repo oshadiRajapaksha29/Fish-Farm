@@ -1,0 +1,126 @@
+.r_related_container {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.r_related_title {
+  font-size: 1.5rem;
+  color: #0a3d62;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.r_related_title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #0a3d62 0%, #4ecdc4 100%);
+  border-radius: 2px;
+}
+
+.r_related_products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.r_related_product {
+  display: flex;
+  flex-direction: column;
+  background: #f8fbfd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.r_related_product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.r_related_image {
+  height: 150px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.r_related_image img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.r_related_info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.r_related_name {
+  font-weight: 600;
+  color: #0a3d62;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.r_related_name:hover {
+  color: #4ecdc4;
+}
+
+.r_related_price {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.r_related_add_btn {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: #0a3d62;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.r_related_add_btn:hover {
+  background: #1e5799;
+}
+
+.r_related_loading {
+  text-align: center;
+  padding: 1rem;
+  color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .r_related_products {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .r_related_products {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+  
+  .r_related_image {
+    height: 120px;
+  }
+}

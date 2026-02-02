@@ -1,0 +1,23 @@
+.shop-wrap {
+  max-width: 1280px;
+  margin: 0 auto;          /* 🔥 no top gap */
+  padding: 0 20px;
+}
+
+
+.shop-title {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: .2px;
+  margin: 0 0 8px;
+  display: inline-block;
+}
+
+.shop-underline {
+  display: block;
+  width: 76px;
+  height: 5px;
+  background: #2bd2c8;
+  border-radius: 999px;
+  margin-top: 6px;
+}

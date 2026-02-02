@@ -1,0 +1,132 @@
+/* ViewAccessories.css - Clean, Spacious, Responsive */
+
+.VA-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.VA-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Table Wrapper */
+.VA-table-wrapper {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  padding: 20px; /* adds space around table */
+}
+
+/* Table */
+.VA-table {
+  width: 100%;
+  border-collapse: separate; /* allows spacing between rows */
+  border-spacing: 0 10px; /* vertical spacing between rows */
+  font-size: 1.2rem;
+  min-width: 1200px; /* table looks bigger */
+}
+
+/* Table Header */
+.VA-table thead {
+  background: #f8f9fa;
+}
+
+.VA-table th {
+  padding: 25px 20px;
+  text-align: left;
+  font-weight: 600;
+  color: #555;
+  border-bottom: 2px solid #dee2e6;
+}
+
+/* Table Cells */
+.VA-table td {
+  padding: 20px;
+  background: #ffffff;
+  border-bottom: none;
+}
+
+/* Row Hover */
+.VA-table tr:hover td {
+  background: #f1f3f5;
+  transition: background 0.2s;
+}
+
+/* Product Image */
+.VA-product-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Buttons */
+.VA-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 3px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  text-align: center;
+  min-width: 100px; /* ensures all buttons same width */
+  transition: all 0.2s ease-in-out;
+}
+
+.VA-update-btn {
+  background: #28a745;
+  color: white;
+}
+
+.VA-update-btn:hover {
+  background: #218838;
+}
+
+.VA-delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.VA-delete-btn:hover {
+  background: #c82333;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .VA-container {
+    padding: 10px;
+  }
+
+  .VA-title {
+    font-size: 1.5rem;
+  }
+
+  .VA-table {
+    font-size: 1rem;
+    min-width: 900px;
+  }
+
+  .VA-table th,
+  .VA-table td {
+    padding: 12px 8px;
+  }
+
+  .VA-product-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .VA-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    min-width: 80px;
+  }
+}

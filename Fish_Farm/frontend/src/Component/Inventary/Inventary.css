@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ===== Base Reset ===== */
+* {
+  margin: 10;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Container (4 Columns Grid) ===== */
+.O_V_I_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 50px; /* Increased gap between cards */
+  padding: 40px;
+  width: 95%;
+  margin: 0 auto;
+  background-color: #eef3fb; /* Softer background */
+}
+
+/* ===== Inventory Card ===== */
+.O_V_I_card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 22px 20px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #dee6ff;
+   margin-bottom: 15px;
+}
+
+.O_V_I_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(0, 123, 255, 0.18);
+}
+
+/* ===== Title ===== */
+.O_V_I_name {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0056b3;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #e0f0ff;
+  padding-bottom: 6px;
+}
+
+/* ===== Details ===== */
+.O_V_I_card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 6px 0;
+  padding-left: 6px;
+  line-height: 1.5;
+}
+
+.O_V_I_card strong {
+  color: #0d47a1;
+}
+
+/* ===== Action Buttons ===== */
+.O_V_I_actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.O_V_I_update,
+.O_V_I_delete {
+  padding: 9px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+/* Update Button */
+.O_V_I_update {
+  background-color: #1976d2;
+  color: white;
+}
+
+.O_V_I_update:hover {
+  background-color: #0d47a1;
+}
+
+/* Delete Button */
+.O_V_I_delete {
+  background-color: #e53935;
+  color: white;
+}
+
+.O_V_I_delete:hover {
+  background-color: #b71c1c;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+  .O_V_I_container {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .O_V_I_container {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .O_V_I_container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

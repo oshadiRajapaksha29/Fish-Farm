@@ -1,0 +1,197 @@
+/* AddNewAccessories.css - Full Screen Modern Design */
+.ANA-container {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #f3f6fa, #e9eef5);
+  box-sizing: border-box;
+}
+
+/* Wrapper centers the form */
+.ANA-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ANA-container h1 {
+  font-size: 40px;
+  margin-bottom: 35px;
+  color: #2c3e50;
+  text-align: center;
+  font-weight: 700;
+}
+
+.ANA-wrapper form {
+  width: 100%;
+}
+
+/* --- Sections --- */
+.ANA-section {
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  padding: 35px 40px;
+  margin-bottom: 35px;
+  transition: transform 0.2s ease;
+}
+
+.ANA-section:hover {
+  transform: translateY(-2px);
+}
+
+.ANA-section h2 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #3498db;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 12px;
+  font-weight: 600;
+}
+
+.ANA-section label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #444;
+}
+
+/* --- Inputs --- */
+.ANA-section input[type="text"],
+.ANA-section input[type="number"],
+.ANA-section select,
+.ANA-section textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 22px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+.ANA-section input:focus,
+.ANA-section select:focus,
+.ANA-section textarea:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 6px rgba(52, 152, 219, 0.4);
+}
+
+.ANA-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.ANA-row input {
+  flex: 1;
+}
+
+.ANA-row span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* --- Image Preview --- */
+.ANA-image-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.ANA-image-preview {
+  position: relative;
+}
+
+.ANA-image-preview img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.ANA-image-preview button {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.ANA-image-preview button:hover {
+  background: #c0392b;
+}
+
+/* --- Buttons --- */
+.ANA-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.ANA-primary-btn,
+.ANA-secondary-btn {
+  padding: 14px 30px;
+  font-size: 17px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.ANA-primary-btn {
+  background: #3498db;
+  color: #fff;
+}
+
+.ANA-primary-btn:hover {
+  background: #2980b9;
+}
+
+.ANA-secondary-btn {
+  background: #ecf0f1;
+  color: #2c3e50;
+}
+
+.ANA-secondary-btn:hover {
+  background: #d0d7de;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .ANA-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ANA-buttons {
+    flex-direction: column;
+  }
+
+  .ANA-buttons button {
+    width: 100%;
+  }
+}

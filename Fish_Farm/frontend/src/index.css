@@ -1,0 +1,19 @@
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 6px;   /* thin scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* hide track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #263850; /* thumb color */
+  border-radius: 10px;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #263850 transparent; /* thumb | track */
+}

@@ -1,0 +1,367 @@
+/* ======================== Add Disease Form CSS (Compact & Balanced) ======================== */
+
+/* Reset and base styles */
+.S_AD_disease-form-page {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0fff4 0%, #dcfce7 50%, #f0fff4 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container - centered with reasonable width */
+.S_AD_disease-form-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 0;
+  box-sizing: border-box;
+}
+
+/* Form wrapper - reduced width for better proportions */
+.S_AD_disease-form-wrapper {
+  width: 90%;
+  max-width: 1000px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(242, 241, 241, 0.08);
+  padding: 40px 35px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative top border */
+.S_AD_disease-form-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #101fa7, #3d0eca, #0445f6);
+}
+
+/* Title */
+.S_AD_form-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #1e293b;
+  position: relative;
+  padding-bottom: 15px;
+  letter-spacing: -0.3px;
+}
+
+.S_AD_form-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #051396, #1021b9);
+  border-radius: 2px;
+}
+
+/* Main form */
+.S_AD_disease-form {
+  width: 100%;
+  max-width: none;
+}
+
+/* Form Box / Section - Compact design */
+.S_AD_disease-form .S_AD_form-box {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+  padding: 35px 30px;
+  margin-bottom: 30px;
+  border-left: 4px solid #160abe;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.S_AD_disease-form .S_AD_form-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(5, 150, 105, 0.03), transparent);
+  transition: left 0.6s ease;
+}
+
+.S_AD_disease-form .S_AD_form-box:hover::before {
+  left: 100%;
+}
+
+.S_AD_disease-form .S_AD_form-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Title */
+.S_AD_form-section-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #0f172a;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e2e8f0;
+  position: relative;
+  display: inline-block;
+}
+
+.S_AD_form-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #0d1fc8;
+  border-radius: 2px;
+}
+
+/* Compact Form Grid Layout */
+.S_AD_form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+/* Labels & Inputs - Compact styling */
+.S_AD_disease-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.S_AD_disease-form input,
+.S_AD_disease-form select,
+.S_AD_disease-form textarea {
+  margin-top: 8px;
+  padding: 14px 16px;
+  font-size: 15px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #fafafa;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.S_AD_disease-form input:hover,
+.S_AD_disease-form select:hover,
+.S_AD_disease-form textarea:hover {
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+}
+
+.S_AD_disease-form input:focus,
+.S_AD_disease-form select:focus,
+.S_AD_disease-form textarea:focus {
+  border-color: #190bb7;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Select dropdown styling */
+.S_AD_disease-form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 18px;
+  padding-right: 45px;
+}
+
+/* Textarea */
+.S_AD_disease-form textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* File input styling */
+.S_AD_disease-form input[type="file"] {
+  padding: 12px 16px;
+  background-color: #f8fafc;
+  border: 1.5px dashed #cbd5e1;
+  cursor: pointer;
+}
+
+.S_AD_disease-form input[type="file"]:hover {
+  border-color: #0c15bd;
+  background-color: #f0fdf4;
+}
+
+.S_AD_disease-form input[type="file"]:focus {
+  border-color: #3409c3;
+  border-style: solid;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+/* Buttons - Compact styling */
+.S_AD_form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+  padding-top: 25px;
+  border-top: 1.5px solid #f1f5f9;
+}
+
+.S_AD_btn-reset,
+.S_AD_btn-submit {
+  padding: 12px 24px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 120px;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.S_AD_btn-reset::before,
+.S_AD_btn-submit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.S_AD_btn-reset:hover::before,
+.S_AD_btn-submit:hover::before {
+  left: 100%;
+}
+
+/* Reset button - red */
+.S_AD_btn-reset {
+  background: #f87171;
+  color: #fff;
+  border: 1.5px solid #ef4444;
+}
+
+.S_AD_btn-reset:hover {
+  background: #ef4444;
+  color: #fff;
+  border-color: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Add Disease button - smaller */
+.S_AD_btn-submit {
+  background: linear-gradient(135deg, #0f33d1, #0811b9);
+  color: #fff;
+  border: 1.5px solid #120bc7;
+  padding: 8px 18px;
+  font-size: 13px;
+  min-width: 100px;
+}
+
+.S_AD_btn-submit:hover {
+  background: linear-gradient(135deg, #0f33d1, #0811b9);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(5, 150, 105, 0.25);
+}
+
+/* Input Icons */
+.S_AD_disease-form label::after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  right: 16px;
+  top: 52%;
+  transform: translateY(-50%);
+  color: #64748b;
+  z-index: 1;
+  pointer-events: none;
+  font-size: 16px;
+}
+
+.S_AD_disease-form label[for*="ReportedBy"]::after { content: "\f007"; }
+.S_AD_disease-form label[for*="DateReported"]::after { content: "\f073"; }
+.S_AD_disease-form label[for*="TankNumber"]::after { content: "\f0c2"; }
+.S_AD_disease-form label[for*="FishSpecies"]::after { content: "\f1b0"; }
+.S_AD_disease-form label[for*="NumberOfFish"]::after { content: "\f0ce"; }
+.S_AD_disease-form label[for*="NumberOfSick"]::after { content: "\f21e"; }
+.S_AD_disease-form label[for*="Symptoms"]::after { content: "\f0f0"; top: 35px; }
+.S_AD_disease-form label[for*="Photos"]::after { content: "\f03e"; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .S_AD_form-buttons {
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .S_AD_form-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .S_AD_btn-reset,
+  .S_AD_btn-submit {
+    width: 100%;
+    min-width: auto;
+    padding: 10px 16px;
+  }
+
+  /* Error Styling */
+.S_AD_input-error {
+  border-color: #dc2626 !important;
+  background: #fef2f2 !important;
+}
+
+.S_AD_input-error:focus {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
+}
+
+.S_AD_error-message {
+  color: #dc2626;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.S_AD_error-message::before {
+  content: '⚠';
+  font-size: 0.75rem;
+}
+}

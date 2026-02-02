@@ -1,0 +1,397 @@
+/* Sidebar.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset and base font */
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ======= CSS Variables ======= */
+/* Define colors, transition durations, and other reusable values */
+:root {
+  --body-color: #E4E9F7;
+  --sidebar-color: #FFF;
+  --primary-color: #4a4a50;
+  --primary-color-light: #F6F5FF;
+  --toggle-color: #DDD;
+  --text-color: #707070;
+
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
+}
+
+/* ======= Main Layout ======= */
+/* Container for main content area */
+.main {
+  height: 100vh;
+  background: var(--body-color);
+  width: 100%;
+  transition: var(--tran-05);
+  position: relative;
+}
+
+/* ======= Sidebar ======= */
+/* Sidebar container fixed to left, full height */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  padding: 10px 14px;
+  background: var(--sidebar-color);
+  transition: var(--tran-05);
+  z-index: 100;
+}
+
+/* Sidebar collapsed state: narrower width */
+.sidebar.close {
+  width: 88px;
+}
+
+/* Sidebar header text styling */
+.sidebar .text {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: var(--tran-03);
+  white-space: nowrap;
+  opacity: 1;
+}
+
+/* Hide text when sidebar is collapsed */
+.sidebar.close .text {
+  opacity: 0;
+}
+
+/* Sidebar logo or image container */
+.sidebar .image {
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+}
+
+/* Sidebar list items styling */
+.sidebar li {
+  height: 50px;
+  margin-top: 10px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Sidebar icon style inside list items */
+.sidebar li .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  font-size: 20px;
+  color: var(--text-color);
+  transition: var(--tran-02);
+}
+
+/* Sidebar text inside list items */
+.sidebar li .text {
+  color: var(--text-color);
+  transition: var(--tran-02);
+}
+
+/* Sidebar header container */
+.sidebar header {
+  position: relative;
+}
+
+/* Image and text container inside header */
+.sidebar .image-text {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo image style */
+.sidebar .image-text img {
+  width: 70px;
+  border-radius: 6px;
+}
+
+/* Header text column layout */
+header .image-text .header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Name text boldness */
+.header-text .name {
+  font-weight: 600;
+}
+
+/* Profession text spacing */
+.header-text .profession {
+  margin-top: -2px;
+}
+
+/* Toggle button style (for collapsing sidebar) */
+.sidebar header .toggle {
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  transform: translateY(-50%) rotate(180deg);
+  height: 25px;
+  width: 25px;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--sidebar-color);
+  font-size: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Toggle button rotation when sidebar is collapsed */
+.sidebar.close .toggle {
+  transform: translateY(-50%) rotate(0deg);
+}
+
+/* ======= Search Box ======= */
+/* Search box container styling */
+.sidebar .g_search_box {
+  background: var(--primary-color-light);
+  height: 50px;
+  border-radius: 6px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+}
+
+/* Search input box styling */
+.g_search_input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  background: var(--primary-color-light);
+  padding-left: 10px;
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+/* Search icon styling */
+.g_search_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  font-size: 20px;
+  color: var(--text-color);
+  transition: var(--tran-02);
+}
+
+/* ======= Sidebar Links ======= */
+/* Sidebar links container */
+.sidebar li a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: var(--tran-04);
+  padding: 0 10px;
+}
+
+/* Hover effect for sidebar links */
+.sidebar li a:hover {
+  background: var(--primary-color);
+}
+
+/* Icon and text color change on hover */
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text {
+  color: var(--sidebar-color);
+}
+
+/* ======= Menu Bar ======= */
+/* Container holding menu and mode toggle */
+.sidebar .menu-bar {
+  height: calc(96% - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* overflow-y: auto; */
+}
+
+/* Mode toggle container */
+.menu-bar .mode {
+  position: relative;
+  background: var(--primary-color-light);
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* Moon and sun icon container */
+.menu-bar .mode .moon-sun {
+  height: 50px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+}
+
+/* Position icons absolutely */
+.menu-bar .mode i {
+  position: absolute;
+}
+
+/* Sun icon initially hidden */
+.menu-bar .mode .sun {
+  opacity: 0;
+}
+
+/* Toggle switch container */
+.menu-bar .mode .toggle-switch {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-width: 60px;
+  cursor: pointer;
+}
+
+/* Toggle switch background */
+.toggle-switch .switch {
+  position: relative;
+  height: 22px;
+  width: 44px;
+  border-radius: 25px;
+  background: var(--toggle-color);
+}
+
+/* The round toggle circle */
+.switch::before {
+  content: '';
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  background: var(--sidebar-color);
+  transition: left 0.3s ease;
+}
+
+/* ======= Dark Mode Styling ======= */
+/* Override CSS variables for dark mode */
+.main.dark {
+  --body-color: #1e1e2f;
+  --sidebar-color: #11101d;
+  --primary-color: #FFF;
+  --primary-color-light: #3a3b3c;
+  --toggle-color: #fff;
+  --text-color: #f1f1f1;
+}
+
+/* Toggle circle moves right in dark mode */
+.main.dark .switch::before {
+  left: 24px;
+  background: var(--primary-color);
+}
+
+/* Moon icon hidden in dark mode */
+.main.dark .mode .moon {
+  opacity: 0;
+}
+
+/* Sun icon shown in dark mode */
+.main.dark .mode .sun {
+  opacity: 1;
+}
+
+/* ======= Main Content Area ======= */
+/* Main content area next to sidebar */
+.home {
+  position: absolute;
+  top: 0;
+  left: 250px;
+  height: 100vh;
+  width: calc(100% - 250px);
+  background: var(--body-color);
+  transition: var(--tran-05);
+  overflow: auto;
+}
+
+/* Main content area adjusts when sidebar collapsed */
+.home.collapsed {
+  left: 88px;
+  width: calc(100% - 88px);
+}
+
+/* Main content heading text */
+.home .text {
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 8px 40px;
+  transition: color 0.3s ease;
+}
+
+/* ======= Submenu Link Styling ======= */
+/* Link color for submenu links */
+.submenu-link a {
+  color: #007bff; /* Primary blue */
+}
+
+/* Hover color for submenu links */
+.submenu-link a:hover {
+  color: #ff5722; /* Bright orange */
+}
+
+/* Text span inside submenu links */
+.submenu-link a .submenu {
+  color: #1900ff; /* Dark blue */
+}
+
+/* Text hover color for submenu text */
+.submenu-link a:hover .submenu {
+  color: #ff5722; /* Bright orange */
+}
+
+/* Icon color inside submenu links */
+.submenu-link a .submenu-icon {
+  color: #4c00ff; /* Purple-blue */
+}
+
+/* Icon hover color inside submenu links */
+.submenu-link a:hover .submenu-icon {
+  color: #ff5722; /* Bright orange */
+}
+
+/* Highlight currently active nav-link */
+.nav-link.active > a {
+  background-color: var(--primary-color);
+}
+
+/* Change icon and text color when active */
+.nav-link.active > a .icon,
+.nav-link.active > a .text {
+  color: var(--sidebar-color);
+}
+
+/* Optional: active submenu style */
+.submenu-link.active > a {
+  background-color: #8c8c8d; /* darker purple */
+}
+
+.submenu-link.active > a .submenu,
+.submenu-link.active > a .submenu-icon {
+  color: #fff;
+}

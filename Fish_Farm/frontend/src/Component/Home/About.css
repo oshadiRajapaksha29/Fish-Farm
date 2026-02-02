@@ -1,0 +1,407 @@
+/* ===================================
+   ABOUT PAGE - MAIN CONTAINER
+   =================================== */
+.g_au_about-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 40px 20px;
+}
+
+.g_au_about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===================================
+   HEADER SECTION
+   =================================== */
+.g_au_about-header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 40px 20px;
+}
+
+.g_au_about-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.g_au_about-subtitle {
+  font-size: 1.3rem;
+  color: #7f8c8d;
+  font-weight: 300;
+}
+
+/* ===================================
+   INTRODUCTION SECTION
+   =================================== */
+.g_au_about-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+  background: white;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.g_au_intro-content h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.g_au_intro-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.g_au_intro-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.g_au_image-placeholder {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.g_au_placeholder-icon {
+  font-size: 6rem;
+  color: white;
+  opacity: 0.9;
+}
+
+/* ===================================
+   MISSION & VISION SECTION
+   =================================== */
+.g_au_about-mission-vision {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.g_au_mission-card,
+.g_au_vision-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.g_au_mission-card:hover,
+.g_au_vision-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.g_au_mission-card h3,
+.g_au_vision-card h3 {
+  font-size: 1.8rem;
+  color: #0062cc;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.g_au_mission-card p,
+.g_au_vision-card p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* ===================================
+   VALUES SECTION
+   =================================== */
+.g_au_about-values {
+  margin-bottom: 60px;
+}
+
+.g_au_section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.g_au_values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.g_au_value-card {
+  background: white;
+  padding: 35px 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.g_au_value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.g_au_value-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #0062cc 0%, #004a99 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  box-shadow: 0 5px 20px rgba(0, 98, 204, 0.3);
+}
+
+.g_au_value-card h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.g_au_value-card p {
+  color: #7f8c8d;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* ===================================
+   WHAT WE OFFER SECTION
+   =================================== */
+.g_au_about-offer {
+  margin-bottom: 60px;
+}
+
+.g_au_offer-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.g_au_offer-item {
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.g_au_offer-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.g_au_offer-item h3 {
+  font-size: 1.5rem;
+  color: #0062cc;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.g_au_offer-item p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* ===================================
+   STATISTICS SECTION
+   =================================== */
+.g_au_about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 50px 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+}
+
+.g_au_stat-item {
+  text-align: center;
+  color: white;
+}
+
+.g_au_stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.g_au_stat-label {
+  font-size: 1.1rem;
+  font-weight: 300;
+  opacity: 0.95;
+}
+
+/* ===================================
+   CALL TO ACTION SECTION
+   =================================== */
+.g_au_about-cta {
+  background: white;
+  padding: 60px 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.g_au_about-cta h2 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.g_au_about-cta p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 35px;
+  line-height: 1.8;
+}
+
+.g_au_cta-button {
+  padding: 16px 50px;
+  background: linear-gradient(135deg, #0062cc 0%, #004a99 100%);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 98, 204, 0.3);
+}
+
+.g_au_cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 98, 204, 0.5);
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+@media (max-width: 992px) {
+  .g_au_about-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .g_au_values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .g_au_offer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .g_au_about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .g_au_about-title {
+    font-size: 2.2rem;
+  }
+
+  .g_au_about-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .g_au_about-intro {
+    padding: 30px 25px;
+  }
+
+  .g_au_about-mission-vision {
+    grid-template-columns: 1fr;
+  }
+
+  .g_au_values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .g_au_section-title {
+    font-size: 2rem;
+  }
+
+  .g_au_about-stats {
+    padding: 40px 25px;
+  }
+
+  .g_au_stat-number {
+    font-size: 2.5rem;
+  }
+
+  .g_au_stat-label {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .g_au_about-title {
+    font-size: 1.8rem;
+  }
+
+  .g_au_about-intro {
+    padding: 20px;
+  }
+
+  .g_au_intro-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .g_au_intro-content p {
+    font-size: 1rem;
+  }
+
+  .g_au_mission-card,
+  .g_au_vision-card {
+    padding: 25px;
+  }
+
+  .g_au_image-placeholder {
+    height: 200px;
+  }
+
+  .g_au_placeholder-icon {
+    font-size: 4rem;
+  }
+
+  .g_au_about-stats {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+  }
+
+  .g_au_about-cta {
+    padding: 40px 25px;
+  }
+
+  .g_au_about-cta h2 {
+    font-size: 1.8rem;
+  }
+}

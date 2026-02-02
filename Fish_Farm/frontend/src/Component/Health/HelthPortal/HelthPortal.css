@@ -1,0 +1,74 @@
+.s-portal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(ellipse at center, #1b1f26 0%, #121417 100%);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.s-items-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 40px 60px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  width: 480px;
+}
+
+.s-portal-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.s-itemsbutton-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.s-itemsbutton-grid a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.s-portal-button {
+  background: #1f1f1f;
+  color: #ffffff; /* Text stays white */
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+
+  width: 170px;
+  height: 110px;
+
+  transition: background 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.s-portal-button:hover {
+  background: #333;
+  transform: scale(1.03);
+}
+
+.s-portal-button svg {
+  font-size: 36px;
+}
+
+/* Icon colors */
+.s-disease svg   { color: #ffc400; }  /* Yellow */
+.s-mortality svg { color: #ff4d4d; }  /* Red */
+.s-medicine svg  { color: #07ff07; }  /* Green */

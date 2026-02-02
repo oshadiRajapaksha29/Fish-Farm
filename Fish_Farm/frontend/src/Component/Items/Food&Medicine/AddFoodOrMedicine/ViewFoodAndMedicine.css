@@ -1,0 +1,267 @@
+/* Food & Medicine View Page - Themed to match Dashboard */
+
+/* Theme tokens - using same variables as dashboard */
+:root {
+  --bg-1: #eef2ff;   /* indigo-50 */
+  --bg-2: #e0f2fe;   /* sky-100  */
+  --ink: #0f172a;    /* slate-900 */
+  --muted: #64748b;  /* slate-500 */
+  --muted-2: #94a3b8;/* slate-400 */
+
+  --card-bg: rgba(255, 255, 255, 0.92);
+  --card-br: 16px;
+  --card-bd: 1px solid rgba(15, 23, 42, 0.08);
+  --card-shadow: 0 12px 28px rgba(2, 6, 23, 0.08), 0 4px 12px rgba(2, 6, 23, 0.05);
+
+  --ring: #a5b4fc;
+
+  --primary: #3b82f6;   /* blue */
+  --success: #22c55e;   /* green */
+  --warning: #f59e0b;   /* amber */
+  --danger: #ef4444;    /* red */
+}
+
+/* Container styling */
+.r_v_FM_container {
+  padding: 30px;
+  max-width: 1600px;
+  width: 98%;
+  margin: 0 auto;
+  color: var(--ink);
+  background:
+    radial-gradient(1000px 600px at -10% -20%, var(--bg-1), transparent 60%),
+    radial-gradient(800px 480px at 110% 0%, var(--bg-2), transparent 55%);
+  border-radius: 20px;
+  min-height: calc(100vh - 100px);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Title styling */
+.r_v_FM_title {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  background: linear-gradient(90deg, #111827, #334155 40%, #2563eb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0 0 24px 0;
+  text-align: center;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.r_v_FM_title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 60px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 2px;
+}
+
+/* Empty state styling */
+.r_v_FM_empty {
+  color: var(--muted);
+  text-align: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  border: 1px dashed rgba(15,23,42,.12);
+  margin: 30px auto;
+  max-width: 600px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.r_v_FM_empty:before {
+  content: "📋";
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* Table styling */
+.r_v_FM_table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--card-bg);
+  backdrop-filter: blur(6px);
+  border: var(--card-bd);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--card-br);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.r_v_FM_table th,
+.r_v_FM_table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.7);
+  text-align: left;
+}
+
+.r_v_FM_table th {
+  background-color: rgba(248, 250, 252, 0.8);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+}
+
+.r_v_FM_table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.r_v_FM_table tbody tr:hover {
+  background-color: rgba(248, 250, 252, 0.5);
+}
+
+/* Image styling */
+.r_v_FM_image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: var(--card-bd);
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(2, 6, 23, 0.05);
+}
+
+.r_v_FM_image:hover {
+  transform: scale(2.5);
+  z-index: 10;
+  box-shadow: 0 12px 24px rgba(2, 6, 23, 0.15);
+}
+
+/* Button styling */
+.r_v_FM_btn {
+  padding: 8px 16px;
+  margin: 3px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.r_v_FM_update {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  box-shadow: 0 2px 5px rgba(37, 99, 235, 0.2);
+}
+
+.r_v_FM_update:hover {
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  transform: translateY(-1px);
+}
+
+.r_v_FM_delete {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  box-shadow: 0 2px 5px rgba(220, 38, 38, 0.2);
+}
+
+.r_v_FM_delete:hover {
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Category styling */
+.r_v_FM_category {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.r_v_FM_category.food {
+  background-color: #ebf5ff;
+  color: #3b82f6;
+}
+
+.r_v_FM_category.medicine {
+  background-color: #ecfdf5;
+  color: #10b981;
+}
+
+/* Stock indicator */
+.r_v_FM_stock {
+  font-weight: 600;
+}
+
+.r_v_FM_stock.low {
+  color: #ef4444;
+}
+
+.r_v_FM_stock.medium {
+  color: #f59e0b;
+}
+
+.r_v_FM_stock.high {
+  color: #10b981;
+}
+
+/* Responsive styling */
+@media (max-width: 1200px) {
+  .r_v_FM_container {
+    padding: 20px;
+    width: calc(100% - 40px);
+  }
+  
+  .r_v_FM_title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 992px) {
+  .r_v_FM_table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .r_v_FM_container {
+    padding: 15px;
+    width: calc(100% - 30px);
+  }
+  
+  .r_v_FM_title {
+    font-size: 24px;
+  }
+  
+  .r_v_FM_btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .r_v_FM_container {
+    padding: 10px;
+    width: calc(100% - 20px);
+  }
+  
+  .r_v_FM_title {
+    font-size: 20px;
+  }
+}

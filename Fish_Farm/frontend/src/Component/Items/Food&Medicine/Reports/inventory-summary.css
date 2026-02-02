@@ -1,0 +1,32 @@
+/* Inventory summary layout */
+.r_fm_r_inventory_summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.r_fm_r_inventory_item {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+}
+
+.r_fm_r_inventory_label {
+  display: block;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 0.3rem;
+}
+
+/* Make inventory summary items smaller to fit in a single card */
+.r_fm_r_inventory_item .r_fm_r_card_value {
+  font-size: 1.8rem;
+}
+
+/* Media query for small screens */
+@media (max-width: 480px) {
+  .r_fm_r_inventory_summary {
+    flex-direction: column;
+  }
+}

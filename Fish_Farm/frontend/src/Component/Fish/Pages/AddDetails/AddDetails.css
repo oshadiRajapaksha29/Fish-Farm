@@ -1,0 +1,379 @@
+/* ======================== Add Fish Form CSS (Compact & Balanced) ======================== */
+
+/* Reset and base styles */
+.S_AF_fish-form-page {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #f0f9ff 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container - centered with reasonable width */
+.S_AF_fish-form-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 0;
+  box-sizing: border-box;
+}
+
+/* Form wrapper - reduced width for better proportions */
+.S_AF_fish-form-wrapper {
+  width: 90%;
+  max-width: 1000px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  padding: 40px 35px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative top border */
+.S_AF_fish-form-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, #3b82f6, #60a5fa);
+}
+
+/* Title */
+.S_AF_form-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #1e293b;
+  position: relative;
+  padding-bottom: 15px;
+  letter-spacing: -0.3px;
+}
+
+.S_AF_form-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  border-radius: 2px;
+}
+
+/* Main form */
+.S_AF_fish-form {
+  width: 100%;
+  max-width: none;
+}
+
+/* Form Box / Section - Compact design */
+.S_AF_fish-form .S_AF_form-box {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+  padding: 35px 30px;
+  margin-bottom: 30px;
+  border-left: 4px solid #2563eb;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.S_AF_fish-form .S_AF_form-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.03), transparent);
+  transition: left 0.6s ease;
+}
+
+.S_AF_fish-form .S_AF_form-box:hover::before {
+  left: 100%;
+}
+
+.S_AF_fish-form .S_AF_form-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Title */
+.S_AF_form-section-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #0f172a;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e2e8f0;
+  position: relative;
+  display: inline-block;
+}
+
+.S_AF_form-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #2563eb;
+  border-radius: 2px;
+}
+
+/* Compact Form Grid Layout */
+.S_AF_form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+/* Full width items */
+.S_AF_full-width {
+  grid-column: 1 / -1;
+}
+
+/* Labels & Inputs - Compact styling */
+.S_AF_fish-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.S_AF_fish-form input,
+.S_AF_fish-form select,
+.S_AF_fish-form textarea {
+  margin-top: 8px;
+  padding: 14px 16px;
+  font-size: 15px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #fafafa;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.S_AF_fish-form input:hover,
+.S_AF_fish-form select:hover,
+.S_AF_fish-form textarea:hover {
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+}
+
+.S_AF_fish-form input:focus,
+.S_AF_fish-form select:focus,
+.S_AF_fish-form textarea:focus {
+  border-color: #2563eb;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Select dropdown styling */
+.S_AF_fish-form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 18px;
+  padding-right: 45px;
+}
+
+/* Textarea */
+.S_AF_fish-form textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* File input styling */
+.S_AF_fish-form input[type="file"] {
+  padding: 12px 16px;
+  background-color: #f8fafc;
+  border: 1.5px dashed #cbd5e1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.S_AF_fish-form input[type="file"]:hover {
+  border-color: #2563eb;
+  background-color: #f0f9ff;
+}
+
+.S_AF_fish-form input[type="file"]:focus {
+  border-color: #2563eb;
+  border-style: solid;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Buttons - Compact styling */
+.S_AF_form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+  padding-top: 25px;
+  border-top: 1.5px solid #f1f5f9;
+}
+
+.S_AF_btn-reset,
+.S_AF_btn-submit {
+  padding: 12px 24px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 120px;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.S_AF_btn-reset::before,
+.S_AF_btn-submit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.S_AF_btn-reset:hover::before,
+.S_AF_btn-submit:hover::before {
+  left: 100%;
+}
+
+/* Reset button - red */
+.S_AF_btn-reset {
+  background: #f87171;
+  color: #fff;
+  border: 1.5px solid #ef4444;
+}
+
+.S_AF_btn-reset:hover {
+  background: #ef4444;
+  color: #fff;
+  border-color: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Add Fish button - smaller */
+.S_AF_btn-submit {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  border: 1.5px solid #2563eb;
+  padding: 8px 18px;
+  font-size: 13px;
+  min-width: 100px;
+}
+
+.S_AF_btn-submit:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.25);
+}
+
+/* Input Icons */
+.S_AF_fish-form label::after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  right: 16px;
+  top: 52%;
+  transform: translateY(-50%);
+  color: #64748b;
+  z-index: 1;
+  pointer-events: none;
+  font-size: 16px;
+}
+
+.S_AF_fish-form label[for*="Species"]::after { content: "\f1b0"; }
+.S_AF_fish-form label[for*="subSpecies"]::after { content: "\f1b0"; }
+.S_AF_fish-form label[for*="Stage"]::after { content: "\f135"; }
+.S_AF_fish-form label[for*="Date"]::after { content: "\f073"; }
+.S_AF_fish-form label[for*="Quantity"]::after { content: "\f0ce"; }
+.S_AF_fish-form label[for*="Tank"]::after { content: "\f0c2"; }
+.S_AF_fish-form label[for*="Weight"]::after { content: "\f496"; }
+.S_AF_fish-form label[for*="Price"]::after { content: "\f155"; }
+.S_AF_fish-form label[for*="About"]::after { content: "\f249"; top: 35px; }
+.S_AF_fish-form label[for*="photo"]::after { content: "\f03e"; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .S_AF_form-buttons {
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .S_AF_form-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .S_AF_btn-reset,
+  .S_AF_btn-submit {
+    width: 100%;
+    min-width: auto;
+    padding: 10px 16px;
+  }
+
+  /* Error message styling */
+.S_AF_error-message {
+  color: #dc2626;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Error message styling */
+.S_AF_error-message {
+  color: #dc2626;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Input error styling */
+.S_AF_input-error {
+  border-color: #dc2626 !important;
+  background-color: #fef2f2 !important;
+}
+
+.S_AF_input-error:focus {
+  border-color: #dc2626 !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
+}
+}

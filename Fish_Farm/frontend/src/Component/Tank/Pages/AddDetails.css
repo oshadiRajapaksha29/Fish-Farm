@@ -1,0 +1,48 @@
+/* AddDetails.css */
+
+/* Theme color variables */
+:root {
+  --bg-color-light: #25c0fd;
+  --text-color-light: #1b0101;
+  --bg-color-dark: #1e1e2f;
+  --text-color-dark: #ffffff;
+}
+
+/* Reset body styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Main container styles */
+.add-details-container {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  background-color: var(--bg-color-light);
+  
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode support using parent .main.dark class */
+.main.dark .add-details-container {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+/* Header text styling */
+.text h2 {
+  font-size: 45px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Paragraph styling */
+.text p {
+  font-size: 16px;
+  color: inherit;
+}
+
+.my{
+  color: var(--text-color-light);
+}

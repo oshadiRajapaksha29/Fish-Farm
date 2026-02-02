@@ -1,0 +1,513 @@
+/* frontend/src/Component/Breading/Mother Tank/MotherTank.css */
+.mother-tank-container {
+  padding: 40px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  min-height: fit-content;
+}
+
+.mother-tank-title {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Form Styles */
+.breeding-form {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.form-section {
+  margin-bottom: 35px;
+  padding: 30px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e1e8ed;
+}
+
+.form-section h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f8f9fa;
+}
+
+.form-section h2::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #3498db;
+  border-radius: 50%;
+}
+
+.section-description {
+  color: #6c757d;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  line-height: 1.5;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+/* Availability Info */
+.availability-info {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  border: 1px solid #90caf9;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 600;
+  color: #1565c0;
+  font-size: 1.1rem;
+}
+
+/* Tanks Grid */
+.tanks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 25px;
+  margin: 25px 0;
+}
+
+.tank-card {
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 15px;
+  padding: 25px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.tank-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+}
+
+.tank-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-color: #3498db;
+}
+
+.tank-card.selected {
+  border-color: #2ecc71;
+  background: linear-gradient(135deg, #f8fff9, #e8f5e8);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(46, 204, 113, 0.2);
+}
+
+.tank-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.tank-code {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.tank-type {
+  background: #3498db;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.tank-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tank-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.tank-detail:last-child {
+  border-bottom: none;
+}
+
+.tank-detail .label {
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.9rem;
+  min-width: 100px;
+}
+
+.tank-detail .value {
+  color: #2c3e50;
+  font-size: 0.95rem;
+  text-align: right;
+  flex: 1;
+  font-weight: 500;
+}
+
+.tank-detail .value.description {
+  font-style: italic;
+  color: #6c757d;
+  text-align: left;
+}
+
+.tank-status {
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  background: #28a745;
+  color: white;
+  padding: 6px 35px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  transform: rotate(45deg);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* No Tanks Message */
+.no-tanks-message {
+  text-align: center;
+  padding: 50px 30px;
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 15px;
+  color: #856404;
+}
+
+.no-tanks-message h3 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.no-tanks-message p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.tank-status-info {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.tank-status-info p {
+  margin: 0;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Selected Tank Info */
+.selected-tank-info {
+  background: linear-gradient(135deg, #d4edda, #c3e6cb);
+  border: 1px solid #c3e6cb;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 600;
+  color: #155724;
+  font-size: 1.1rem;
+}
+
+.tank-confirmation {
+  color: #28a745;
+  margin-left: 10px;
+}
+
+/* Form Rows and Inputs */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.form-group label::after {
+  content: '*';
+  color: #e74c3c;
+  margin-left: 4px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-group input:disabled,
+.form-group select:disabled,
+.form-group textarea:disabled {
+  background: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.5;
+}
+
+/* Form Summary */
+.form-summary {
+  background: #e3f2fd;
+  border: 1px solid #bbdefb;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 30px 0;
+}
+
+.form-summary h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #bbdefb;
+  padding-bottom: 10px;
+}
+
+.summary-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.summary-content p {
+  margin: 8px 0;
+  color: #2c3e50;
+  font-weight: 500;
+  padding: 10px;
+  background: white;
+  border-radius: 6px;
+  border-left: 4px solid #3498db;
+}
+
+/* Buttons */
+.form-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.submit-btn, .reset-btn, .refresh-btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 160px;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #218838, #1e9e8a);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.submit-btn:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.reset-btn {
+  background: linear-gradient(135deg, #dc3545, #e83e8c);
+  color: white;
+}
+
+.reset-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #c82333, #d91a7a);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+.refresh-btn {
+  background: linear-gradient(135deg, #007bff, #6f42c1);
+  color: white;
+}
+
+.refresh-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #0056b3, #5a3596);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Status Messages */
+.loading, .error-message {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.loading {
+  background: #e3f2fd;
+  color: #007bff;
+  border: 1px solid #bbdefb;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.retry-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+.retry-btn:hover {
+  background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mother-tank-container {
+    padding: 20px 3%;
+  }
+  
+  .breeding-form {
+    width: 96%;
+    padding: 25px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .tanks-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .form-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .submit-btn, .reset-btn, .refresh-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .summary-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .mother-tank-title {
+    font-size: 2rem;
+  }
+  
+  .form-section {
+    padding: 20px;
+  }
+  
+  .tank-card {
+    padding: 20px;
+  }
+  
+  .tank-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
+
+/* Fix for number input arrows */
+.form-group input[type="number"]::-webkit-outer-spin-button,
+.form-group input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-group input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.2s ease;
+}

@@ -1,0 +1,158 @@
+/* ======================= Dashboard Container ======================= */
+.fish-dashboard-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #f9fafb);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Dashboard Title */
+.dashboard-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ======================= Table Styling ======================= */
+.fish-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+}
+
+.fish-table thead {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+}
+
+.fish-table thead th {
+  color: #fff;
+  font-weight: 700;
+  padding: 16px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.fish-table tbody tr {
+  border-bottom: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.fish-table tbody tr:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.fish-table tbody td {
+  padding: 16px;
+  font-size: 15px;
+  color: #374151;
+}
+
+/* ======================= Badges for Stage / Quantity ======================= */
+.badge {
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-weight: 600;
+  color: #fff;
+  display: inline-block;
+}
+
+/* Stage badges */
+.stage-fry {
+  background: #10b981; /* green */
+}
+.stage-juvenile {
+  background: #f59e0b; /* amber */
+}
+.stage-adult {
+  background: #ef4444; /* red */
+}
+
+/* Quantity badge */
+.quantity-badge {
+  background: #3b82f6; /* blue */
+}
+
+/* ======================= Buttons ======================= */
+.btn-view {
+  padding: 8px 20px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37,99,235,0.25);
+}
+
+.btn-view:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37,99,235,0.35);
+}
+
+/* ======================= Sidebar ======================= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 380px;
+  height: 100%;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: -5px 0 25px rgba(0,0,0,0.2);
+  padding: 25px;
+  overflow-y: auto;
+  border-left: 2px solid rgba(37,99,235,0.2);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.btn-close {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(37,99,235,0.25);
+  transition: all 0.3s ease;
+}
+
+.btn-close:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37,99,235,0.35);
+}
+
+/* ======================= Responsive ======================= */
+@media (max-width: 1024px) {
+  .fish-table thead th,
+  .fish-table tbody td {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fish-table {
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 90%;
+  }
+}
+  

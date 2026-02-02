@@ -1,0 +1,128 @@
+.r_mini_cart {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  overflow: hidden;
+  padding: 0;
+  margin-top: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.cart-btn:hover .r_mini_cart,
+.r_mini_cart:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.r_mini_cart_header {
+  padding: 12px 15px;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #f9f9f9;
+}
+
+.r_mini_cart_header h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+.r_mini_cart_items {
+  padding: 10px 0;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.r_mini_cart_item {
+  display: flex;
+  padding: 10px 15px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+.r_mini_cart_item:hover {
+  background-color: #f9f9f9;
+}
+
+.r_mini_cart_item:last-child {
+  border-bottom: none;
+}
+
+.r_mini_cart_image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.r_mini_cart_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.r_mini_cart_info {
+  flex: 1;
+}
+
+.r_mini_cart_name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.r_mini_cart_price {
+  font-size: 12px;
+  color: #666;
+}
+
+.r_mini_cart_empty {
+  padding: 15px;
+  text-align: center;
+  color: #666;
+  font-size: 13px;
+}
+
+.r_mini_cart_footer {
+  padding: 12px 15px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #f0f0f0;
+}
+
+.r_mini_cart_total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.r_mini_cart_view_btn {
+  width: 100%;
+  padding: 8px 0;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.r_mini_cart_view_btn:hover {
+  background-color: #005fcc;
+}

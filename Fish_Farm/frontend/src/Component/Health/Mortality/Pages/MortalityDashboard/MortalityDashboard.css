@@ -1,0 +1,55 @@
+.mortality-dash {
+  padding: 20px;
+}
+
+.mortality-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.mortality-table th, .mortality-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.mortality-table th {
+  background: #f8fafc;
+  font-weight: 700;
+  color: #334155;
+}
+
+.view-btn {
+  background: #2563eb;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 380px;
+  height: 100%;
+  background: #f8f9fa;
+  box-shadow: -3px 0 5px rgba(0,0,0,0.2);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.close-btn {
+  background: #6b7280;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 6px 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
